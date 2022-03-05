@@ -20,9 +20,8 @@ Dica: No vídeo de introdução sobre o Docker quando falamos sobre o sistema de
 
 Divirta-se
  
-Utilizando o multi-stage build para compilar a aplicação e otimizar a imagem
 
-  Link pa utilização da imagem no dockerhub:https://hub.docker.com/repository/docker/glaubermaciel/desafio_docker01
+ Link pa utilização da imagem no dockerhub:https://hub.docker.com/repository/docker/glaubermaciel/desafio_docker01
   
   
   
