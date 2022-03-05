@@ -1,0 +1,24 @@
+# Iniciando uma imagem base golang:alpine
+FROM golang:alpine AS builder
+
+# criando diretório de trabalho
+WORKDIR /src
+
+# Copiando o app
+COPY . .
+
+# Compilando o binário removendo informações de debug
+RUN go build -ldflags '-s -w' olamundo.go
+
+
+# Iniciando com scratch
+FROM scratch
+
+# diretório de trabalho
+WORKDIR /
+    
+# copiando o binário
+COPY --from=builder /src / 
+
+# executando 
+CMD ["./olamundo"]
